@@ -1,7 +1,8 @@
 # VDL_Homework1
 ## Introduction
-This is the HW2 in visual deep learning. In this project, we should predict the bounding boxes and categories of digits in the given image and then output the whole number of this image. This could be viewed as two tasks. I apply Faster RCNN with pretrained backbone of MobileNet-V3 on `torchvision` which is called `FasterRCNN_MobileNet_V3_Large_FPN_Weights.COCO_V1`. The following table shows the hyper-parameters for our training:
+This is the HW2 in visual deep learning. In this project, we should predict the bounding boxes and categories of digits in the given image and then output the whole number of this image. This could be viewed as two tasks. I apply Faster RCNN with pretrained backbone of MobileNet-V3 on `torchvision` which is called `FasterRCNN_MobileNet_V3_Large_FPN_Weights.COCO_V1`. I set all parameters of the Faster RCNN to be trainbale and apply different learning rate to different layers of the model. I choose Adam as the optimizer and apply cosine annealing learning decay. The detailed hyper-parameters for training is shown as the following:
 
+![image](https://github.com/user-attachments/assets/f0e416fe-0115-4dc2-9829-d934fa96c057)
 
 ## Project structure
 - `train.py` is the main function for training
@@ -30,8 +31,22 @@ This is the HW2 in visual deep learning. In this project, we should predict the 
   ```
   python train.py
   ```
+- Find the best threshold for Task 2
+  ```
+  python find_threshold.py
+  ```
+- Inference (You can setup your `model weights` and `threshold`)
+  ```
+  python inference.py
+  ```
+- Ensemble Multiple models' results
+  ```
+  python ensemble.py
+  ```
 
 ## Performance
+The validation score of my method.
+![image](https://github.com/user-attachments/assets/3f04c546-1cfb-421b-a72d-74c5688f5587)
 
 
 ### Reference
