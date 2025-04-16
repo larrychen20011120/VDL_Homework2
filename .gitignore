@@ -1,0 +1,9 @@
+*.zip
+*.csv
+*.json
+*.png
+*.jpg
+*.pth
+*.out.tfevenvts
+__pycache__
+runs
