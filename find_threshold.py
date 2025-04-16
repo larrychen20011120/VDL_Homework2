@@ -41,7 +41,7 @@ def get_labels_from_annotations(annotations):
 
 
 TEST_DIR = "nycu-hw2-data/valid"
-CHECKPOINT_PATH = "Grod_shuffle/model_epoch_29.pth"
+CHECKPOINT_PATH = "new_aug/model_epoch_29.pth"
 DEVICE = torch.device('cuda') if torch.cuda.is_available() else torch.device('cpu')
 
 if __name__ == "__main__":
@@ -96,30 +96,7 @@ if __name__ == "__main__":
                 }
                 results.append(result)
             
-            if len(keep) == 0:
-                result = {
-                    "image_id": int(image_id),
-                    "bbox": [],
-                    "score": 0.0,
-                    "category_id": -1
-                }
-                results.append(result)
-
-            ### NMS ###
-
-            # for box, score, label in zip(boxes, scores, labels):
-            #     x_min, y_min, x_max, y_max = box
-            #     width = x_max - x_min
-            #     height = y_max - y_min
-            #     result = {
-            #         "image_id": int(image_id),
-            #         "bbox": [float(x_min), float(y_min), float(width), float(height)],
-            #         "score": float(score),
-            #         "category_id": int(label)
-            #     }
-            #     results.append(result)
-
-            # if len(boxes) == 0:
+            # if len(keep) == 0:
             #     result = {
             #         "image_id": int(image_id),
             #         "bbox": [],
@@ -131,7 +108,7 @@ if __name__ == "__main__":
     image2labels = get_labels_from_annotations(json_data["annotations"])
 
 
-    for threshold in np.arange(0.1, 1.0, 0.05):
+    for threshold in np.arange(0.0, 1.0, 0.05):
         grouped_preds = defaultdict(list)
         for pred in results:
             if pred["score"] >= threshold:

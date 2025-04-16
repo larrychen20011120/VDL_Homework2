@@ -135,7 +135,6 @@ dependencies:
   - pure_eval=0.2.2=pyhd3eb1b0_0
   - pygments=2.15.1=py310h06a4308_1
   - pyparsing=3.2.0=py310h06a4308_0
-  - pyqt=5.15.10=py310h6a678d5_1
   - pyqt5-sip=12.13.0=py310h5eee18b_1
   - pysocks=1.7.1=py310h06a4308_0
   - python=3.10.10=h7a1cb2a_2
@@ -175,14 +174,32 @@ dependencies:
   - zlib=1.2.13=h5eee18b_1
   - zstd=1.5.6=hc292b87_0
   - pip:
+      - absl-py==2.2.2
+      - albucore==0.0.23
+      - albumentations==2.0.5
+      - annotated-types==0.7.0
       - fvcore==0.1.6
+      - grpcio==1.71.0
       - iopath==0.1.10
       - joblib==1.4.2
+      - markdown==3.8
+      - opencv-python==4.11.0.86
+      - opencv-python-headless==4.11.0.86
       - portalocker==3.1.1
+      - protobuf==6.30.2
+      - pycocotools==2.0.8
+      - pydantic==2.11.3
+      - pydantic-core==2.33.1
       - scikit-learn==1.6.1
       - scipy==1.15.2
+      - simsimd==6.2.1
+      - stringzilla==3.12.3
       - tabulate==0.9.0
+      - tensorboard==2.19.0
+      - tensorboard-data-server==0.7.2
       - termcolor==2.5.0
       - threadpoolctl==3.6.0
+      - typing-inspection==0.4.0
+      - werkzeug==3.1.3
       - yacs==0.1.8
 prefix: /home/larrychen1120/anaconda3/envs/DL-Image

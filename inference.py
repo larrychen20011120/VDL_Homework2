@@ -19,7 +19,7 @@ BATCH_SIZE = 1
 NUM_WORKERS = 4
 
 TEST_DIR = "nycu-hw2-data/test"
-CHECKPOINT_PATH = "Grod_shuffle/model_epoch_29.pth"
+CHECKPOINT_PATH = "new_aug/model_epoch_29.pth"
 OUTPUT_JSON = "pred.json"
 
 if __name__ == "__main__":
@@ -72,14 +72,14 @@ if __name__ == "__main__":
                 }
                 results.append(result)
             
-            if len(keep) == 0:
-                result = {
-                    "image_id": int(image_id),
-                    "bbox": [],
-                    "score": 0.0,
-                    "category_id": -1
-                }
-                results.append(result)
+            # if len(keep) == 0:
+            #     result = {
+            #         "image_id": int(image_id),
+            #         "bbox": [],
+            #         "score": 0.0,
+            #         "category_id": -1
+            #     }
+            #     results.append(result)
 
             ### NMS ###
 
@@ -112,7 +112,7 @@ if __name__ == "__main__":
     # 參數設定
     PRED_JSON = "pred.json"
     OUTPUT_CSV = "pred.csv"
-    SCORE_THRESHOLD = 0.45
+    SCORE_THRESHOLD = 0.4
 
     # 讀入 pred.json
     with open(PRED_JSON, "r") as f:

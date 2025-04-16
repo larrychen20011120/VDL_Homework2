@@ -15,7 +15,14 @@ BATCH_SIZE = 1
 NUM_WORKERS = 4
 
 TEST_DIR = "nycu-hw2-data/test"
-MODEL_CHECKPOINTS = ["Grod_shuffle/model_epoch_29.pth", "erasing_hierarchical/model_epoch_29.pth"]
+MODEL_CHECKPOINTS = [
+    "Grod_shuffle/model_epoch_15.pth",
+    "Grod_shuffle/model_epoch_29.pth", 
+    "erasing_hierarchical/model_epoch_15.pth",
+    "erasing_hierarchical/model_epoch_29.pth", 
+    "new_aug/model_epoch_15.pth",
+    "new_aug/model_epoch_29.pth"
+]
 OUTPUT_JSON = "pred.json"
 
 SCORE_THRESHOLD = 0.45

@@ -56,7 +56,7 @@ if __name__ == "__main__":
     model = get_model(num_classes=NUM_CLASSES)
     model = model.to(DEVICE)
     
-    # params = [ param for param in model.parameters() if param.requires_grad ]
+    ### assign different learning rates to different parts of the model
     backbone_params = []
     rpn_params = []
     roi_heads_params = []
