@@ -46,7 +46,8 @@ This is the HW2 in visual deep learning. In this project, we should predict the 
 
 ## Performance
 The validation score of my method.
-![image](https://github.com/user-attachments/assets/3f04c546-1cfb-421b-a72d-74c5688f5587)
+![螢幕擷取畫面 2025-04-16 223059](https://github.com/user-attachments/assets/cc41329f-3b70-4397-9cd4-7ee114472ef2)
+
 
 
 ### Reference
